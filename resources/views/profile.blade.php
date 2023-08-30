@@ -57,20 +57,20 @@
     <table >
         <tr>
         <th>Order ID</th>
-        <th>Product id</th>
+        <th>product name</th>
         <th>Price</th>
         <th>Total</th>
-        <th>product name</th>
-        <th>product_availability</th>
+
+        {{-- <th>product_availability</th> --}}
     </tr>
     @foreach ($orders as $order)
     <tr>
         <td> {{ $order->id }}</td>
-          <td>{{$order->product_id}}</td>
+        <td>{{$order->product_name}}</td>
         <td> {{ $order->price }}</td>
         <td>{{ $order->total }}</td>
-        <td>{{$order->product_name}}</td>
-        <td>{{$order->product_availability}}</td>
+{{--
+        <td>{{$order->product_availability}}</td> --}}
 
 
     </tr>

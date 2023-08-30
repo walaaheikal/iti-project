@@ -46,7 +46,7 @@
     </header>
     <br>
     <br>
-<section class="display-product-table">
+<section class="display-product-table" enctype="multipart/form-data">
    <table >
 
     <thead>
@@ -62,7 +62,7 @@
     <tbody>
         @foreach($products as $product)
         <tr>
-            <td> <img width="120" height="90" src="{{ $product->product_image }}" alt="Product Image"></td>
+            <td> <img  src="/imgs/{{ $product->product_image }}" alt="Product Image" width="200px"></td>
             <td>{{$product->product_name}}</td>
             <td>{{$product->product_price}}</td>
             <td>{{$product->product_availability}}</td>

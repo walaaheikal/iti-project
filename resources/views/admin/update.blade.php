@@ -13,7 +13,7 @@
 
 <body>
     <section class="edit-form-container">
-        <form action="{{ route('product.edit', $product->id) }}" method="POST">
+        <form action="{{ route('product.edit', $product->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 {{--
@@ -42,7 +42,7 @@
 
             <input type="text" class="box" name="category_id" value="{{ $product->category_id }}">
             <input type="file" name="product_image" class="form-control" placeholder="image">
-            <img src="/imgs/{{ $product->product_image }}" width="300px">
+            <img src="/imgs/{{ $product->product_image }}" width="150px">
 
 
 

@@ -50,7 +50,7 @@
     <div class="box-container">
         @foreach ($products as $product)
         <div class="box">
-            <img src="{{ $product->product_image }}" alt="Product Image">
+            <img src="/imgs/{{ $product->product_image }}" alt="Product Image">
             <h3>{{ $product->product_name }}</h3>
             <div class="price">{{ $product->product_price }}$</div>
             <h2>{{ $product->product_availability }}</h2>

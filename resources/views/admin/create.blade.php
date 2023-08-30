@@ -32,7 +32,7 @@
                     @enderror --}}
 
         <input type="text" class="box" name="product_availability"placeholder="product availability">
-        {{-- <input  type="file" name="product_image" placeholder="Product image"> --}}
+        <input  type="file" name="product_image" placeholder="Product image">
 {{--
         @error('category_id')
           <div >{{ $message }}</div>

@@ -85,14 +85,14 @@ class ProductController extends Controller
         // $image=$image->getClientOriginalExtension();
         // $image_name=time(). '.' . $image;
         // $request->product_image->move('public/imgs/' . $image_name);}
+        $input=$request->all();
+    if ($image = $request->file('product_image')) {
+        $destinationPath = 'imgs/';
+        $profileImage = date('www') . "." . $image->getClientOriginalExtension();
+        $image->move($destinationPath, $profileImage);
+        $input['product_image'] = "$profileImage";
+    }
 
-    // if ($image = $request->file('product_image')) {
-    //     $destinationPath = 'imgs/';
-    //     $profileImage = date('www') . "." . $image->getClientOriginalExtension();
-    //     $image->move($destinationPath, $profileImage);
-    //     $input['product_image'] = "$profileImage";
-    // }
-    $input=$request->all();
         Product::create($input);
         return redirect()->route('product.index');
 

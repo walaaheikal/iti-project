@@ -30,7 +30,7 @@
 </head>
 <body>
 <div class="details">
-<img width="400px" height="350" src="{{ $product->product_image }}" alt="Product Image"><br>
+<img width="400px" height="350" src="/imgs/{{ $product->product_image }}" alt="Product Image"><br>
 
 <div class="content">
 
